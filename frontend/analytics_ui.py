@@ -52,7 +52,7 @@ def category_analytics_tab():
 
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
-            "",  # Removes header text
+            "select",  # Removes header text
             ["Bar Chart", "Table"],
             index=["Bar Chart", "Table"].index(st.session_state["selected_view"]),
             horizontal=True,
@@ -177,7 +177,7 @@ def monthly_analytics_tab():
 
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
-            "",  # Removes header text
+            "Select",  # Removes header text
             ["Bar Chart", "Table"],
             index=["Bar Chart", "Table"].index(st.session_state["monthly_selected_view"]),
             horizontal=True,

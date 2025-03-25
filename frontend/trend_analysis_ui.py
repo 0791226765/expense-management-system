@@ -50,7 +50,7 @@ def daily_analytics_tab():
 
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
-            "",  # Removes header text
+            "select",  # Removes header text
             ["Area Chart", "Table"],
             index=["Area Chart", "Table"].index(st.session_state["daily_selected_view"]),
             horizontal=True,
