@@ -43,7 +43,7 @@ def category_analytics_tab():
 
     # Only display analytics if data exists
     if st.session_state["analytics_data"] is not None:
-        df_sorted = st.session_state["analytics_data"].sort_values(by="Percentage", ascending=False)
+        df_sorted = st.session_state["analytics_data"].sort_values(by="Total", ascending=False)
 
         # Dynamic Title with Reduced Size
         st.markdown(
