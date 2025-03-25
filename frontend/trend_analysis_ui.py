@@ -15,7 +15,7 @@ def daily_analytics_tab():
             "July", "August", "September", "October", "November", "December"
         ])
     with col2:
-        year = st.number_input("Select Year", min_value=2000, max_value=2100, value=datetime.today().year, step=1)
+        year = st.number_input("Select Year", min_value=2000, max_value=2100, value=datetime.today().year, step=1,key="daily_year_input")
 
     # Initialize session state for analytics data & view selection
     if "daily_analytics_data" not in st.session_state:

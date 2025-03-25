@@ -141,7 +141,7 @@ def category_analytics_tab():
 
 def monthly_analytics_tab():
     # User selects the year for analytics
-    year = st.number_input("Select Year", min_value=2000, max_value=2100, value=datetime.today().year, step=1)
+    year = st.number_input("Select Year", min_value=2000, max_value=2100, value=datetime.today().year, step=1,key="monthly_year_input")
 
     # Initialize session state for analytics data & view selection
     if "monthly_analytics_data" not in st.session_state:
