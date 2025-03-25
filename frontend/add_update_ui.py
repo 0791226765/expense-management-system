@@ -4,7 +4,7 @@ import requests
 
 API_URL = "https://expense-management-system-3-trks.onrender.com"
 def add_update_tab():
-    selected_date = st.date_input("Enter Date", datetime(2024, 8, 1), label_visibility="collapsed")
+    selected_date = st.date_input("Enter Date", datetime.today().date(), label_visibility="collapsed")
     response = requests.get(f"{API_URL}/expenses/{selected_date}")
     if response.status_code == 200:
         existing_expenses = response.json()
