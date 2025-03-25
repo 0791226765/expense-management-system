@@ -72,10 +72,10 @@ def category_analytics_tab():
                     x=alt.X("Category:N",
                             axis=alt.Axis(labelAngle=0, labelColor="black", title="Category", titleFontWeight="bold",
                                           titleColor="black")),  # X-axis labels horizontal & title bold black
-                    y=alt.Y("Percentage:Q",
-                            axis=alt.Axis(title="Percentage", titleFontWeight="bold", titleColor="black", grid=False)),
+                    y=alt.Y("Total:Q",
+                            axis=alt.Axis(title="Total Expenditure", titleFontWeight="bold", titleColor="black", grid=False)),
                     # Y-axis title bold black & grid lines removed
-                    tooltip=["Category", alt.Tooltip("Percentage:Q", format=",.2f")]  # Rounded percentages in tooltip
+                    tooltip=["Category", alt.Tooltip("Total:Q", format=",.2f")]  # Rounded percentages in tooltip
                 )
             )
 
@@ -85,8 +85,8 @@ def category_analytics_tab():
                 .mark_text(dy=-10, color="black", fontWeight="bold")  # Labels positioned above bars & bold black
                 .encode(
                     x="Category:N",
-                    y="Percentage:Q",
-                    text=alt.Text("Percentage:Q", format=",.2f")  # Rounded to 2 decimal places
+                    y="Total:Q",
+                    text=alt.Text("Total:Q", format=",.2f")  # Rounded to 2 decimal places
                 )
             )
 
@@ -197,10 +197,10 @@ def monthly_analytics_tab():
                     x=alt.X("Month:N",
                             axis=alt.Axis(labelAngle=0, labelColor="black", title="Month", titleFontWeight="bold",
                                           titleColor="black")),  # X-axis labels horizontal & title bold black
-                    y=alt.Y("Percentage:Q",
-                            axis=alt.Axis(title="Percentage", titleFontWeight="bold", titleColor="black", grid=False)),
+                    y=alt.Y("Total:Q",
+                            axis=alt.Axis(title="Total Expenditure", titleFontWeight="bold", titleColor="black", grid=False)),
                     # Y-axis title bold black & grid lines removed
-                    tooltip=["Month", alt.Tooltip("Percentage:Q", format=",.2f")]  # ✅ Rounded percentages in tooltip
+                    tooltip=["Month", alt.Tooltip("Total:Q", format=",.2f")]  # Rounded percentages in tooltip
                 )
             )
 
@@ -210,8 +210,8 @@ def monthly_analytics_tab():
                 .mark_text(dy=-10, color="black", fontWeight="bold")  # Labels positioned above bars & bold black
                 .encode(
                     x="Month:N",
-                    y="Percentage:Q",
-                    text=alt.Text("Percentage:Q", format=",.2f")  # Rounded to 2 decimal places
+                    y="Total:Q",
+                    text=alt.Text("Total:Q", format=",.2f")  # Rounded to 2 decimal places
                 )
             )
 
