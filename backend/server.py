@@ -17,6 +17,10 @@ class DateRange(BaseModel):
 class YearInput(BaseModel):
     year: int
 
+class MonthYearInput(BaseModel):
+    month: str
+    year: int
+
 @app.get("/expenses/{expense_date}",response_model=List[Expense])
 def get_expenses(expense_date:date):
     expenses = db_helper.fetch_expenses_for_date(expense_date)
@@ -58,6 +62,25 @@ def get_monthly_expenses(year_input: YearInput):
     for row in data:
         percentage = (row["total"] / total) * 100 if total != 0 else 0
         breakdown[row["month"]] = {
+            "total": row["total"],
+            "percentage": percentage
+        }
+
+    return breakdown
+
+@app.post("/analytics/daily/")
+def get_daily_expenses(month_year_input:MonthYearInput):
+    data = db_helper.fetch_daily_expenditure(month_year_input.month, month_year_input.year)
+
+    if data is None:
+        raise HTTPException(status_code=500, detail="Failed to retrieve daily expense summary from the database")
+
+    total = sum([row["total"] for row in data])
+    breakdown = {}
+
+    for row in data:
+        percentage = (row["total"] / total) * 100 if total != 0 else 0
+        breakdown[row["expense_day"]] = {
             "total": row["total"],
             "percentage": percentage
         }

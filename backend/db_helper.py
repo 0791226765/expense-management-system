@@ -70,11 +70,26 @@ def fetch_monthly_summary(year):
                        )
         data = cursor.fetchall()
         return data
-
+def fetch_daily_expenditure(month,year):
+    logger.info(f"fetch_daily_summary called with year month: {month}, year: {year}")
+    with get_db_cursor() as cursor:
+        cursor.execute(''' SELECT Day(expense_date) AS expense_day,
+    SUM(amount) AS total
+    FROM sql7769328.expenses
+    WHERE MONTHNAME(expense_date) = %s
+    AND YEAR(expense_date) = %s 
+    GROUP BY expense_day
+    ORDER BY expense_day''', (month,year)
+                       )
+        data = cursor.fetchall()
+        return data
 if __name__ == "__main__":
-    # expenses = fetch_monthly_summary("2024")
+    expenses = fetch_daily_expenditure("March","2025")
+    for i in expenses:
+        print(i)
+    # expenses = fetch_monthly_summary("2025")
     # print(expenses)
     # print("***expenses for 8/20******")
-    summary = fetch_expense_summary("2024-08-01","2024-08-05")
-    for record in summary:
-        print(record)
+#     summary = fetch_expense_summary("2024-08-01","2024-08-05")
+#     for record in summary:
+#         print(record)
