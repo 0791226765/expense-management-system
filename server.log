@@ -1,3 +1,18 @@
 2025-03-25 20:14:40,643 - db_helper - INFO - fetch_monthly_summary called with year 2025
 2025-03-25 20:24:58,122 - db_helper - INFO - fetch_expense_summary called with start: 2024-08-01 end: 2024-08-05
 2025-03-25 20:30:07,601 - db_helper - INFO - fetch_daily_summary called with year month: march, year: 2025
+2025-03-26 07:53:01,524 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:53:29,481 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:53:32,958 - db_helper - INFO - fetch_expense_summary called with start: 2024-08-01 end: 2024-08-05
+2025-03-26 07:53:48,146 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:54:07,882 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:54:16,089 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:54:24,116 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:54:35,010 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:54:39,546 - db_helper - INFO - fetch_monthly_summary called with year 2025
+2025-03-26 07:55:10,054 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:55:40,705 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:55:45,306 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 07:55:48,902 - db_helper - INFO - fetch_daily_summary called with year month: March, year: 2025
+2025-03-26 07:56:03,529 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26
+2025-03-26 08:11:05,797 - db_helper - INFO - fetch_expenses_for_date called with 2025-03-26

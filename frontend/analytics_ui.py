@@ -9,10 +9,12 @@ API_URL = "https://expense-management-system-3-trks.onrender.com"
 
 def category_analytics_tab():
     col1, col2 = st.columns(2)
+    today = datetime.today().date() # Today's date
+    first_day = today.replace(day=1) # First day of the current month
     with col1:
-        start_date = st.date_input("Start Date", datetime(2024, 8, 1))
+        start_date = st.date_input("Start Date", first_day)
     with col2:
-        end_date = st.date_input("End Date", datetime(2024, 8, 5))
+        end_date = st.date_input("End Date", today)
 
     # Extract month and year dynamically
     month_year = start_date.strftime("%B %Y") if start_date.month == end_date.month and start_date.year == end_date.year \
@@ -52,7 +54,7 @@ def category_analytics_tab():
 
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
-            "select",  # Removes header text
+            "select view",
             ["Bar Chart", "Table"],
             index=["Bar Chart", "Table"].index(st.session_state["selected_view"]),
             horizontal=True,
@@ -177,7 +179,7 @@ def monthly_analytics_tab():
 
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
-            "Select",  # Removes header text
+            "Select View",
             ["Bar Chart", "Table"],
             index=["Bar Chart", "Table"].index(st.session_state["monthly_selected_view"]),
             horizontal=True,
