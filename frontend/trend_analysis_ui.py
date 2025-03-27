@@ -71,8 +71,10 @@ def daily_analytics_tab():
                 alt.Chart(df_sorted)
                 .mark_area(color="darkblue", opacity=0.5)  # Area Chart with transparency
                 .encode(
-                    x=alt.X("Day:O", title="Day", axis=alt.Axis(labelColor="black", titleFontWeight="bold")),
-                    y=alt.Y("Total:Q", title="Total Expenditure", axis=alt.Axis(titleFontWeight="bold", titleColor="black")),
+                    x=alt.X("Day:O", title="Days of the Month",
+                            axis=alt.Axis(labelColor="black", titleFontWeight="bold", grid=False)),
+                    y=alt.Y("Total:Q", title="Total Expenditure",
+                            axis=alt.Axis(titleFontWeight="bold", titleColor="black", grid=False)),
                     tooltip=["Day", alt.Tooltip("Total:Q", format=",.2f")]
                 )
             )
