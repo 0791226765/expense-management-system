@@ -19,8 +19,8 @@ def add_update_tab():
         st.error("Failed to retrieve expenses")
         existing_expenses = []
 
-    categories = ["Rent", "Food", "Shopping", "Entertainment","School fees","Debt Repayment",
-                  "Upkeep","Farmhand","Maid","Transport & Lunch","Church","Gas & Stima","Airtime","Other"]
+    categories = ["Rent", "Food", "Shopping", "Entertainment", "School fees", "Debt Repayment",
+                  "Upkeep", "Farmhand", "Maid", "Transport & Lunch", "Church", "Gas and Tokens", "Airtime", "Other"]
     with st.form(key="expense_form"):
         col1, col2, col3 = st.columns(3)
         with col1:
