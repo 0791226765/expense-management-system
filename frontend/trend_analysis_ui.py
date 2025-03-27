@@ -51,8 +51,8 @@ def daily_analytics_tab():
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
             "select",  # Removes header text
-            ["Area Chart", "Table"],
-            index=["Area Chart", "Table"].index(st.session_state["daily_selected_view"]),
+            ["Show Trend", "Table"],
+            index=["Show Trend", "Table"].index(st.session_state["daily_selected_view"]),
             horizontal=True,
             label_visibility="collapsed",
             key="daily_view_radio"
@@ -61,7 +61,7 @@ def daily_analytics_tab():
         # Store the selected view in session state
         st.session_state["daily_selected_view"] = view_option
 
-        if view_option == "Area Chart":
+        if view_option == "Show Trend":
             # Create Area Chart with Customizations
             chart = (
                 alt.Chart(df_sorted)
