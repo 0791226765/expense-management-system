@@ -31,7 +31,7 @@ def add_update_tab():
             st.text("Notes")
 
         expenses = []
-        for i in range(10):
+        for i in range(7):
             if i < len(existing_expenses):
                 amount = existing_expenses[i]['amount']
                 category = existing_expenses[i]["category"]
