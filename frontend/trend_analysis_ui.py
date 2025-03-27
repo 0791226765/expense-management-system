@@ -21,7 +21,7 @@ def daily_analytics_tab():
     if "daily_analytics_data" not in st.session_state:
         st.session_state["daily_analytics_data"] = None  # Store API data in session state
     if "daily_selected_view" not in st.session_state:
-        st.session_state["daily_selected_view"] = "Show Trend"  # Default selected view
+        st.session_state["daily_selected_view"] = "Area Chart"  # Default selected view
 
     # Fetch analytics data when button is clicked
     if st.button("Get Daily Analytics"):
@@ -51,8 +51,8 @@ def daily_analytics_tab():
         # Arrange radio buttons horizontally and remove header
         view_option = st.radio(
             "select",  # Removes header text
-            ["Show Trend", "Table"],
-            index=["Show Trend", "Table"].index(st.session_state["daily_selected_view"]),
+            ["Area Chart", "Table"],
+            index=["Area Chart", "Table"].index(st.session_state["daily_selected_view"]),
             horizontal=True,
             label_visibility="collapsed",
             key="daily_view_radio"
@@ -61,7 +61,7 @@ def daily_analytics_tab():
         # Store the selected view in session state
         st.session_state["daily_selected_view"] = view_option
 
-        if view_option == "Show Trend":
+        if view_option == "Area Chart":
             # Create Area Chart with Customizations
             chart = (
                 alt.Chart(df_sorted)
