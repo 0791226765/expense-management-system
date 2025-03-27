@@ -77,8 +77,22 @@ def daily_analytics_tab():
                 )
             )
 
-            # Display the Area Chart in Streamlit
-            st.altair_chart(chart, use_container_width=True)
+            # Create Data Labels
+            text_labels = (
+                alt.Chart(df_sorted)
+                .mark_text(align="center", dy=-10, fontSize=12, color="black")  # Adjust dy to position labels
+                .encode(
+                    x="Day:O",
+                    y="Total:Q",
+                    text=alt.Text("Total:Q", format=",.2f")  # Format numbers with commas
+                )
+            )
+
+            # Combine Area Chart and Labels
+            final_chart = chart + text_labels
+
+            # Display in Streamlit
+            st.altair_chart(final_chart, use_container_width=True)
 
         else:
             # Ensure index starts from 1 and is displayed as a column
