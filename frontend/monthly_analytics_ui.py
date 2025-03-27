@@ -61,10 +61,10 @@ def monthly_analytics_tab():
                 .mark_bar(color="darkblue")  # Blue bars
                 .encode(
                     x=alt.X("Month:N",
-                            axis=alt.Axis(labelAngle=0, labelColor="black", title="Month", titleFontWeight="bold",
+                            axis=alt.Axis(labelAngle=0, labelColor="black", titleFontWeight="bold",
                                           titleColor="black")),  # X-axis labels horizontal & title bold black
                     y=alt.Y("Total:Q",
-                            axis=alt.Axis(title="Total Expenditure", titleFontWeight="bold", titleColor="black", grid=False)),
+                            axis=alt.Axis(labelColor="black",title="Total Expenditure", titleFontWeight="bold", titleColor="black", grid=False)),
                     # Y-axis title bold black & grid lines removed
                     tooltip=["Month", alt.Tooltip("Total:Q", format=",.2f")]  # Rounded percentages in tooltip
                 )
