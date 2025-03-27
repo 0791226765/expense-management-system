@@ -27,7 +27,7 @@ def category_analytics_tab():
         st.session_state["selected_view"] = "Bar Chart"  # Store selected view in session state
 
     # Fetch analytics data when button is clicked
-    if st.button("Get Analytics"):
+    if st.button("Get Category Analytics"):
         payload = {
             "start_date": start_date.strftime("%Y-%m-%d"),
             "end_date": end_date.strftime("%Y-%m-%d")

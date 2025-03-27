@@ -28,7 +28,7 @@ def daily_analytics_tab():
         st.session_state["daily_selected_view"] = "Show Trend"
 
     # Fetch analytics data when button is clicked
-    if st.button("Get Analytics"):
+    if st.button("Get Daily Analytics"):
         payload = {"month": month, "year": year}
         response = requests.post(f"{API_URL}/analytics/daily/", json=payload)
 

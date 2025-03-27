@@ -16,7 +16,7 @@ def monthly_analytics_tab():
         st.session_state["monthly_selected_view"] = "Bar Chart"  # Store selected view in session state
 
     # Fetch analytics data when button is clicked
-    if st.button("Get Analytics"):
+    if st.button("Get Monthly Analytics"):
         payload = {"year": year}
         response = requests.post(f"{API_URL}/analytics/monthly/", json=payload)
 
