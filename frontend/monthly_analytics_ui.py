@@ -61,7 +61,7 @@ def monthly_analytics_tab():
                 .mark_bar(color="darkblue")  # Blue bars
                 .encode(
                     x=alt.X("Month:N",
-                            axis=alt.Axis(labelAngle=0, labelColor="black",labelFontWeight="bold")), # X-axis labels horizontal
+                            axis=alt.Axis(labelAngle=0, labelColor="black",labelFontWeight="bold", title = None)), # X-axis labels horizontal
                     y=alt.Y("Total:Q",
                             axis=alt.Axis(labelColor="black",title="Total Expenditure", titleFontWeight="bold", titleColor="black", grid=False)),
                     # Y-axis title bold black & grid lines removed
