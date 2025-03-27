@@ -4,7 +4,7 @@ import requests
 import pandas as pd
 import altair as alt
 
-API_URL = "https://expense-management-system-qwwu.onrender.com"
+API_URL = "https://expense-management-system-aufr.onrender.com"
 
 
 def category_analytics_tab():

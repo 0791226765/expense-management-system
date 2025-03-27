@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import datetime
 import requests
 
-API_URL = "https://expense-management-system-qwwu.onrender.com"
+API_URL = "https://expense-management-system-aufr.onrender.com"
 
 def add_update_tab():
     # Ensure the default date is always today
