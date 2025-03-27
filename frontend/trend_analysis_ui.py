@@ -21,7 +21,7 @@ def daily_analytics_tab():
     if "daily_analytics_data" not in st.session_state:
         st.session_state["daily_analytics_data"] = None  # Store API data in session state
     if "daily_selected_view" not in st.session_state:
-        st.session_state["daily_selected_view"] = "Area Chart"  # Default selected view
+        st.session_state["daily_selected_view"] = "Show Trend"  # Default selected view
 
     # Fetch analytics data when button is clicked
     if st.button("Get Daily Analytics"):
