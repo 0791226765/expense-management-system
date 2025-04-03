@@ -4,7 +4,8 @@ import requests
 import pandas as pd
 import altair as alt
 
-API_URL = "https://expense-management-system-aufr.onrender.com"
+API_URL = "http://localhost:8000"
+# API_URL = "https://expense-management-system-aufr.onrender.com"
 def monthly_analytics_tab():
     # User selects the year for analytics
     year = st.number_input("Select Year", min_value=2000, max_value=2100, value=datetime.today().year, step=1,key="monthly_year_input")
