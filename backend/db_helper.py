@@ -6,10 +6,14 @@ logger = setup_logger('db_helper')
 @contextmanager
 def get_db_cursor(commit=False):
     connection = mysql.connector.connect(
-        host = "sql7.freesqldatabase.com",
-        user = "sql7769328",
-        password = "Y5y8BR6rb8",
-        database = "sql7769328"
+        host="localhost",
+        user="root",
+        password="root",
+        database="expense_manager"
+        # host = "sql7.freesqldatabase.com",
+        # user = "sql7769328",
+        # password = "Y5y8BR6rb8",
+        # database = "sql7769328"
     )
     if connection.is_connected():
         print("Connection successful")
